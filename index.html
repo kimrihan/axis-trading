@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<link rel="stylesheet" href="./main.css" />
+		<script src="./main.js" defer></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="calculator">
+				<div class="side left">
+					<div class="input-wrap up">
+						<div class="input-container deposit-quantity">
+							<div class="label">예치수량</div>
+							<input
+								type="number"
+								pattern="[0-9]*"
+								data-cy="hb-input"
+								inputmode="decimal"
+							/>
+						</div>
+						<div class="input-container deposit-asset">
+							<div class="label">예치자산</div>
+							<select name="" id="asset">
+								<option value="BTC">BTC</option>
+								<option value="BSC_BUSD">BUSD</option>
+								<option value="ETH">ETH</option>
+								<option value="TRX_USDC">USDC</option>
+								<option value="USDT" selected>USDT</option>
+							</select>
+						</div>
+					</div>
+					<div class="input-wrap bottom deposit-period">
+						<div class="label">예치기간</div>
+						<select name="" id="period">
+							<option value="THREE_MONTHS">3개월</option>
+							<option value="HALF_YEAR">6개월</option>
+							<option value="ONE_YEAR" selected>1년</option>
+							<option value="THREE_YEARS">3년</option>
+						</select>
+					</div>
+					<div class="description">
+						<p>
+							계산된 누적 수익은 현재 제공 중인 수익률이 적용된
+							결과이며, 실제 상품 이용 시작 시점에 따라 수익률은
+							달라질 수 있습니다.
+						</p>
+					</div>
+				</div>
+				<div class="side right">
+					<div class="price-container">
+						<div class="label">예치수량</div>
+						<div class="price">
+							<span class="deposit-quantity"></span>
+							<span class="dq-type"></span>
+						</div>
+					</div>
+					<div class="price-container">
+						<div class="label">월 수익률</div>
+						<div class="price annual-yeild"></div>
+					</div>
+					<div class="price-container">
+						<div class="label">예치수량을 포함한 누적 수익</div>
+						<div class="price">
+							<span class="profit"></span>
+							<span class="profit-type"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
